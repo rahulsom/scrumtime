@@ -9,6 +9,7 @@ class Schedule {
 
     static constraints = {
         music nullable: true
+        name unique: true
     }
 
     @Override
