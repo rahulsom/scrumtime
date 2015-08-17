@@ -4,8 +4,9 @@ import org.quartz.JobExecutionContext
 
 class PlayJob {
 
-    MusicService playService
+    MusicService musicService
+
     final void execute(JobExecutionContext context) {
-        playService.playMusicForSchedule(context.trigger.key.getName())
+        musicService.playMusicForSchedule(context.trigger.key.getName())
     }
 }
