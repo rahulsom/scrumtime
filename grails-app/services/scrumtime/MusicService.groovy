@@ -6,7 +6,7 @@ import javazoom.jl.player.Player
 @Transactional
 class MusicService {
 
-    private static final File DATA_DIR = new File('data')
+    private static final File DATA_DIR = new File(System.getProperty('user.home'), '.scrumtime/data')
 
     void playMusicForSchedule(String name) {
         def schedule = Schedule.findByName(name)
