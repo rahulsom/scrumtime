@@ -1,0 +1,10 @@
+sudo: false
+
+language: groovy
+
+env:
+  global:
+    - BINTRAY_USER=rahulsom
+    - secure: dTJfvf/ovNxZkBaWqdlkUiWQOCbiTFBw5N9NTZ32BeMZp6QupzeMSYzgVqQxtrd9acYV0EM8o+80L1Yysil4RcY3DX/KmqoAQmE0SU9+aP4Y/aAuqom8RU5SD84NsB4ZgpVwQlISkVIaNC6PXSYfyUkukxkqCq/rCNyo79kMRVOkfdhQbnjOZh4mEhA804THQOeaKcV/kGjesr84pjCB8dUccYmdezOiDETDCxyx16Jg/K38eJDM0AZQtnJsHMrvtZiD2Cc7k6dawBSpd4V73DEI9ZLj/8CtcCOCc98m1nhQFtJqc4iDoLZWG7jZVZcp2210atoM7e5wjIPi//WC82dyO5fzQtyvH3lbU9DX2cDx2uJinMNwuLjUssH+wivTYA0qbXsrov12a12qBrSZtPoQTGoq0ScGwaDz0Gerj4/DiucgdyxCpXUJjCtsLCku8K5LdTy+mT5Zgf7/p5LTcZIsjggoB5WWl1cW5pACLcDqvvreNZTcUKxzYMWNX8j2R11kLnYXJrsayceB6E+YaXbjgeqPEEVAF4WAMD/r7rPZx/YwIAqKXSa8vbA9vCwqzvyL5VKhQF2EkvDZKwU7cdpaktcZNy+jWDb7gf+NveAC+9kf9AA+0T3SYZEfQeL6wkbnAC0dhVuyu1q3HNnXsQhXuYKC8jiUQjr7HuFMGoQ=
+
+script: ./travis.sh
