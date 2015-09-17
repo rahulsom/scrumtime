@@ -41,6 +41,7 @@ assets {
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
+    maven { url  "http://dl.bintray.com/dmahapatro/plugins" }
 }
 
 dependencyManagement {
@@ -66,8 +67,8 @@ dependencies {
 
     compile "javazoom:jlayer:1.0.1"
 
-    runtime "org.grails.plugins:asset-pipeline"
-
+    runtime "org.grails.plugins:asset-pipeline:3.0.6"
+    compile "org.grails.plugins:actuator-ui:0.1"
 
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
