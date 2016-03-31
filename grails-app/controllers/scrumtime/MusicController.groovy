@@ -57,4 +57,12 @@ class MusicController extends RestfulController<Music>{
             }
         }
     }
+
+    void download(String id) {
+        def music = Music.get(id)
+        response.setContentType("audio/mpeg")
+        response.setHeader("Content-disposition", "filename=${music.filename}")
+        response.outputStream << musicService.fileForName(music.filename).bytes
+        response.outputStream.flush()
+    }
 }
