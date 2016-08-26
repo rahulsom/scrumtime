@@ -5,6 +5,7 @@ buildscript {
     repositories {
         mavenLocal()
         maven { url "https://repo.grails.org/grails/core" }
+        jcenter()
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
@@ -41,7 +42,8 @@ assets {
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
-    maven { url  "http://dl.bintray.com/dmahapatro/plugins" }
+    maven { url "http://dl.bintray.com/dmahapatro/plugins" }
+    jcenter()
 }
 
 dependencyManagement {
@@ -64,8 +66,11 @@ dependencies {
     compile "org.hibernate:hibernate-ehcache"
     compile "org.grails.plugins:scaffolding"
     compile "org.grails.plugins:quartz:2.0.0"
+    compile 'org.grails.plugins:fields:2.1.2'
 
     compile "javazoom:jlayer:1.0.1"
+
+    compile 'net.redhogs.cronparser:cron-parser-core:2.9'
 
     runtime "org.grails.plugins:asset-pipeline:3.0.6"
     compile "org.grails.plugins:actuator-ui:0.1"
