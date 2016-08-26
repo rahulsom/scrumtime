@@ -19,11 +19,7 @@ grails:
         disable:
             accept:
                 header:
-                    userAgents:
-                        - Gecko
-                        - WebKit
-                        - Presto
-                        - Trident
+                    userAgents: []
         types:
             all: '*/*'
             atom: application/atom+xml
@@ -114,3 +110,5 @@ environments:
                 testOnReturn: false
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+
+grails.plugin.fields.disableLookupCache: true

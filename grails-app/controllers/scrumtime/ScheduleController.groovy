@@ -1,6 +1,7 @@
 package scrumtime
 
 import grails.rest.RestfulController
+import net.redhogs.cronparser.CronExpressionDescriptor
 
 class ScheduleController extends RestfulController<Schedule> {
     SchedulerService schedulerService
@@ -21,5 +22,10 @@ class ScheduleController extends RestfulController<Schedule> {
         def retval = super.update()
         schedulerService.rebuild()
         return retval
+    }
+
+    def preview(String id) {
+        def retval = [expression: id, description:CronExpressionDescriptor.getDescription(id)]
+        respond(retval)
     }
 }
